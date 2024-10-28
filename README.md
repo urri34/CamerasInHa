@@ -35,3 +35,5 @@ img2345.src = "/tmpfs/auto.jpg?" + (new Date()).getTime();
 ```
 ### In HA:
 ![My HA IPCam config](https://github.com/urri34/IpCamsInHa/blob/main/IpCamHAConfig.jpg)
+
+[Full control detail](https://github.com/urri34/MyRTSPCapt?tab=readme-ov-file#home-assistant-integration)
