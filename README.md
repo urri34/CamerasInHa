@@ -33,3 +33,5 @@ Strictly it's called thru javascript:
 ```
 img2345.src = "/tmpfs/auto.jpg?" + (new Date()).getTime();
 ```
+### In HA:
+![My HA IPCam config](https://github.com/urri34/IpCamsInHa/blob/main/IpCamHAConfig.jpg)
