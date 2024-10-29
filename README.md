@@ -37,3 +37,20 @@ img2345.src = "/tmpfs/auto.jpg?" + (new Date()).getTime();
 ![My HA IPCam config](https://github.com/urri34/IpCamsInHa/blob/main/IpCamHAConfig.jpg)
 
 [Full control detail](https://github.com/urri34/MyRTSPCapt?tab=readme-ov-file#home-assistant-integration)
+
+## ESP32-cam
+
+If adding an esp32 camera, it has no rtsp stream and needs to be added in special way using http. (Assuming standard esp32 cam config)
+
+![My HA ESP32-Cam config](https://github.com/urri34/IpCamsInHa/blob/main/ESP32CamHAConfig.jpg.PNG).
+
+Tip: It's also a good option to give the cam an static ip in order to easily config it in HA. 
+```
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  manual_ip:
+    static_ip: 192.168.1.9
+    gateway: 192.168.1.1
+    subnet: 255.255.255.0
+```
