@@ -27,7 +27,7 @@ APP              Camhipro / Camhi
  
 ### Snapshot:
 
-- http://<ip>/tmpfs/auto.jpg
+- http://ip/tmpfs/auto.jpg
 
 Strictly it's called thru javascript:
 ```
