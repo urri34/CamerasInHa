@@ -48,7 +48,7 @@ wifi:
 
   # Optional manual IP
   manual_ip:
-    static_ip: 192.168.1.8
+    static_ip: 192.168.1.2
     gateway: 192.168.1.1
     subnet: 255.255.255.0
 
@@ -121,15 +121,65 @@ You can copy it from the original device created.
 On the top right of the webpage a link called "Secrets" should appear. It's used to store there the SSID and the password of the wifi instead of storing them in the main config files. You should edit this and be sure that the informations stored is the right one.
 ```
 # Your Wi-Fi SSID and password
-wifi_ssid: "MyRealWifiSSI"
+wifi_ssid: "MyRealWifiSSID"
 wifi_password: "MyUltraSecretPassword"
 ```
 Config done! 
 
-### ESP32-CAM FW install
+### ESP32-CAM FW build
 
 Now click on the three dots in the device, and select install. It's a must for the first time to select the manual download option. It's going to start with the compilation of the firmware for your esp32-cam device (it can take up to 10 minuts depending on yur hardware, but you can see it working in real time). Once it finish we are going to download it in factory format. 
 
-Firmware done! Lets connect your esp32-cam to your computer with a data USB cable, WITH A DATA USB CABLE! You have to be sure that the USB cable is able to send data not only power. Now, lets open [](https://web.esphome.io/) . We are going to click on the "Connect button", the select the port and 
+Firmware done! Lets keep this file in a safe place. I call it "esp32-cam2.factory.bin". 
 
-![My HA ESP32-Cam config](ESP32CamHAConfig.jpg).
+### ESP32-CAM FW install
+
+Lets connect your esp32-cam to your computer with a data USB cable, WITH A DATA USB CABLE! You have to be sure that the USB cable is able to send data not only power. Now, lets open [](https://web.esphome.io/) . We are going to click on the "Connect button", the select the port and this will appear. 
+
+![ESP32Cam-FW](ESP32Cam-FW.jpg).
+
+First of all we are going to "Prepare for first use", and wait until it ends. Then click "Install" and select the "esp32-cam2.factory.bin" file. Firmware installed.
+
+### ESP32-CAM start and monitor
+
+Click "Logs" and "Reset device" something like this should appear:
+
+```
+[18:27:55]ets Jul 29 2019 12:21:46
+(...)
+[18:27:56][C][component:163]: Setup esp32_camera took 214ms
+(...)
+[18:28:07][D][wifi:576]: Found networks:
+[18:28:07][I][wifi:599]: - 'MyRealWifiSSID' [redacted]▂▄▆█          <----- YOUR WIFI NETWORK IS DETECTED
+[18:28:07][D][wifi:601]:     Channel: 11
+[18:28:07][D][wifi:601]:    RSSI: -67 dB
+(...)
+[18:28:07][I][wifi:329]: Connecting to 'MyRealWifiSSID'
+[18:28:07][I][wifi:675]: Connected                                   <----- YOU ARE CONNECTED TO YOUR WIFI NETWORK
+[18:28:07][C][wifi:444]:   Local MAC: CA:FE:CA:FE:CA:FE
+[18:28:07][C][wifi:449]:   SSID: [redacted]
+[18:28:07][C][wifi:452]:   IP Address: 192.168.1.2                   <----- YOUR IP
+[18:28:07][C][wifi:456]:   BSSID: [redacted]
+[18:28:07][C][wifi:456]:  Hostname: 'esp32-cam2'                     <----- YOUR HOSTNAME
+[18:28:07][C][wifi:456]:  Signal strength: -66 dB ▂▄▆█             <----- SIGNAL STRENGHT
+[18:28:07][C][wifi:467]:   Channel: 11
+[18:28:07][C][wifi:467]:  Subnet: 255.255.255.0
+[18:28:07][C][wifi:467]:  Gateway: 192.168.1.1
+[18:28:07][C][wifi:467]:  DNS1: 0.0.0.0
+[18:28:07][C][wifi:467]:  DNS2: 0.0.0.0
+(...)
+[18:28:08][C][captive_portal:122]: Captive Portal:
+[18:28:08][C][web_server:309]: Web Server:
+[18:28:08][C][web_server:309]:  Address: 192.168.1.2:80               <----- STANDARD WEBPAGE
+(...)
+[18:28:08][C][esp32_camera_web_server:088]: ESP32 Camera Web Server:
+[18:28:08][C][esp32_camera_web_server:088]:  Port: 8080               <----- STREAM PORT
+[18:28:08][C][esp32_camera_web_server:093]:   Mode: stream
+[18:28:08][C][esp32_camera_web_server:088]: ESP32 Camera Web Server:
+[18:28:08][C][esp32_camera_web_server:088]:  Port: 8081               <----- SNAP PORT
+(...)
+```
+
+### ESP32-CAM Home assistant config
+
+![ESP32CamHAConfig](ESP32CamHAConfig.jpg).
