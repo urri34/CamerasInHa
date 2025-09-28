@@ -182,4 +182,6 @@ Click "Logs" and "Reset device" something like this should appear:
 
 ### ESP32-CAM Home assistant config
 
+To add them to home assistant, just use the following example:
+
 ![ESP32CamHAConfig](ESP32CamHAConfig.jpg).
