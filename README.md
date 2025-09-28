@@ -160,7 +160,9 @@ On the top right of the webpage a link called "Secrets" should appear. It's used
 wifi_ssid: "MyRealWifiSSI"
 wifi_password: "MyUltraSecretPassword"
 ```
-Config done! Now click on the three dots in the device, and select install. It's a must for the first time to select the manual download option. It's going to start with the compilation of the firmware for your esp32-cam device
+Config done! Now click on the three dots in the device, and select install. It's a must for the first time to select the manual download option. It's going to start with the compilation of the firmware for your esp32-cam device (it can take up to 10 minuts depending on yur hardware, but you can see it working in real time). Once it finish we are going to download it in factory format. 
+
+Firmware done! Lets connect your esp32-cam to your computer with a data USB cable, WITH A DATA USB CABLE! You have to be sure that the USB cable is able to send data not only power. Now, lets open [](https://web.esphome.io/) . We are going to click on the "Connect button", the select the port and 
 
 
 ![My HA ESP32-Cam config](https://github.com/urri34/IpCamsInHa/blob/main/ESP32CamHAConfig.jpg.PNG).
