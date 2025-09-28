@@ -132,4 +132,4 @@ Now click on the three dots in the device, and select install. It's a must for t
 
 Firmware done! Lets connect your esp32-cam to your computer with a data USB cable, WITH A DATA USB CABLE! You have to be sure that the USB cable is able to send data not only power. Now, lets open [](https://web.esphome.io/) . We are going to click on the "Connect button", the select the port and 
 
-![My HA ESP32-Cam config](https://github.com/urri34/IpCamsInHa/blob/main/ESP32CamHAConfig.jpg.PNG).
+![My HA ESP32-Cam config](ESP32CamHAConfig.jpg).
